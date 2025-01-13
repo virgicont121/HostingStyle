@@ -1,0 +1,193 @@
+// --------------------
+// Main SCSS File
+// --------------------
+
+// Variables and Defaults
+@import 'variables'; // Configuración global de variables
+
+// Vendor Styles
+@import 'vendor/bootstrap/bootstrap'; // Estilos base de Bootstrap
+
+// Global Styles
+@import 'typography'; // Estilos de tipografía
+@import 'global';     // Estilos globales
+
+// Component Styles
+@import 'header';     // Estilos del header y hero
+@import 'button';     // Estilos de botones
+@import 'form';       // Estilos de formularios
+@import 'section';    // Estilos específicos para secciones
+
+// Utilities and Extras
+@import 'slick';      // Estilos adicionales para Slick (si aplica)
+
+// --------------------
+// Specific Overrides
+// --------------------
+
+// Color Classes
+.bg-dark-gray {
+    background: #c5c5c6;
+}
+.bg-light {
+    background: #edeff0;
+}
+.text-light {
+    color: #fff;
+
+    * {
+        color: #fff;
+    }
+}
+.text-dark {
+    color: #606060 !important;
+}
+.color-brand {
+    color: $primary;
+}
+.color-header {
+    color: #000;
+}
+.color-body {
+    color: #333;
+}
+
+// Section Styling
+.single-column:nth-child(odd) {
+    background-color: $main1; // Main Color 1
+}
+
+.single-column:nth-child(even) {
+    background-color: $main2; // Main Color 2
+}
+
+.contact-section {
+    background-color: $secondary2; // Secondary Color for Contact
+}
+
+// Global Single-Column Styling
+.single-column {
+    padding: 60px 20px;
+
+    @include media-breakpoint-up(md) {
+        padding: 80px 40px;
+    }
+
+    .row {
+        align-items: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 30px;
+
+        @include media-breakpoint-up(md) {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 40px;
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+// Section Padding and Alternating Layouts
+section {
+    position: relative;
+    padding: 60px 0;
+
+    &:nth-child(odd) {
+        background-color: $main2; // Alternate Color 1
+    }
+
+    &:nth-child(even) {
+        background-color: $secondary2; // Alternate Color 2
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 80px 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 120px 0;
+    }
+
+    &.hero {
+        padding-top: 80px;
+        background-color: $main1; // Hero Background
+        color: $header-font;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 150px;
+        }
+    }
+
+    &.image-right {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        .content {
+            width: 50%;
+        }
+
+        .image-container {
+            width: 50%;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &.image-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .content {
+            width: 50%;
+        }
+
+        .image-container {
+            width: 50%;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+// Footer Styling
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+
+    p {
+        margin: 0;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}

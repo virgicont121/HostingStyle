@@ -1,0 +1,123 @@
+// -------------------------
+// Header and Hero Styles
+// -------------------------
+
+header {
+    position: relative;
+    padding: 15px;
+    z-index: 999 !important;
+    transition: 0.5s;
+
+    &.scrolled {
+        background: rgba(0, 0, 0, 0.8); // Fondo negro semitransparente al desplazarse
+    }
+
+    .header-logo {
+        img {
+            width: 80px;
+            transition: 0.4s ease-in-out;
+
+            @include media-breakpoint-up(md) {
+                width: 100px;
+
+                .scrolled & {
+                    width: 80px;
+                }
+            }
+        }
+    }
+
+    .header-phone {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: #FFD700; // Color dorado para destacar el teléfono
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #FFA500; // Color naranja en hover
+        }
+
+        i {
+            font-family: "Font Awesome 5 Free";
+            font-size: 1.5rem;
+            margin-right: 8px;
+        }
+    }
+}
+
+// -------------------------
+// Hero Section Styles
+// -------------------------
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff; // Texto blanco para la sección hero
+    padding: 80px 20px;
+
+    @include media-breakpoint-up(md) {
+        padding: 150px 40px;
+    }
+
+    .background-image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // Imagen de fondo ajustada
+        }
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 3.5rem;
+        }
+    }
+
+    .subheadline {
+        font-size: 1.2rem;
+        margin: 20px 0;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+        background-color: #D4B99B;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+            background-color: #B39378;
+            transform: scale(1.05); // Efecto de ampliación en hover
+        }
+
+        &:active {
+            background-color: #A27C65; // Color más oscuro en clic
+            transform: scale(0.98); // Efecto de pulsación
+        }
+    }
+}

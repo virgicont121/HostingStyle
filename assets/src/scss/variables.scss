@@ -1,0 +1,49 @@
+// --------------------
+// VARIABLES
+//---------------------
+
+// Brand Colors
+$primary        : #e43c1b; // Color principal para elementos destacados.
+$secondary      : #333;    // Color secundario para textos principales.
+$secondary2     : #E9CDC2; // Color secundario adicional para fondos suaves.
+
+// Main Colors
+$main1          : #D4B99B; // Color principal 1 para fondos alternos.
+$main2          : #F5EFE5; // Color principal 2 para fondos alternos.
+
+// Header
+$headerbg       : #fff;    // Color de fondo del header (cuando se hace scroll).
+$header-font    : #000;    // Color del texto del header.
+
+// Typography
+$text-light     : #fff;    // Color de texto claro.
+$text-dark      : #606060; // Color de texto oscuro.
+$text-muted     : #777;    // Color de texto secundario.
+
+// Buttons
+$button-bg      : $main1;  // Fondo de los botones.
+$button-hover   : darken($main1, 10%); // Color hover de los botones.
+
+// Borders
+$border-light   : rgba(0, 0, 0, 0.13); // Bordes claros para inputs y elementos.
+$border-dark    : rgba(0, 0, 0, 0.5);  // Bordes más oscuros si es necesario.
+
+// Backgrounds
+$bg-light       : #edeff0; // Color de fondo claro para secciones suaves.
+$bg-dark-gray   : #c5c5c6; // Color de fondo oscuro para contraste.
+
+// Fonts
+$font-primary   : 'Roboto', sans-serif; // Fuente principal.
+$font-header    : 'Roboto', sans-serif; // Fuente para encabezados.
+
+// Spacing
+$padding-small  : 10px;
+$padding-medium : 20px;
+$padding-large  : 40px;
+$padding-xlarge : 60px;
+
+// Breakpoints (Bootstrap Defaults)
+$breakpoint-sm  : 576px;
+$breakpoint-md  : 768px;
+$breakpoint-lg  : 992px;
+$breakpoint-xl  : 1200px;

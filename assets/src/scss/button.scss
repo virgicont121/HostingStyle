@@ -1,0 +1,51 @@
+/* Buttons */
+.btn,
+button {
+    display: inline-block;
+    padding: 12px 24px; // Ajuste de tamaño para mayor comodidad
+    background-color: #D4B99B; // Color principal del botón
+    border: none;
+    border-radius: 8px; // Bordes más suaves para un diseño moderno
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: #B39378; // Color más oscuro en hover
+        transform: scale(1.05); // Pequeña ampliación en hover
+    }
+
+    &:active {
+        background-color: #A27C65; // Color más oscuro en clic
+        transform: scale(0.98); // Efecto de pulsación
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(212, 185, 155, 0.5); // Efecto de enfoque visible
+    }
+}
+
+/* Botones específicos para distintas secciones */
+.btn {
+    margin-top: 20px;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 40px;
+    }
+}
+
+/* Ajustes de la sección de texto relacionada con botones */
+.text-section {
+    padding-right: 20px;
+
+    @include media-breakpoint-up(md) {
+        padding-right: 40px;
+    }
+}
+
